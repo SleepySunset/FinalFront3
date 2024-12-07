@@ -1,10 +1,16 @@
+@use '../index' as *;
 nav{
     display: flex;
     justify-content: space-between;
     box-shadow: inset 0px -8px 33px -21px rgba(55,36,72,1);
     align-items: center;
+}
+.nav-light{
+    background-color: $lilac;
+}
 
-
+.nav-dark{
+    background-color: $purple;
 }
 .navbar-container{
     display: flex;
@@ -18,31 +24,34 @@ nav{
     width: 100px;
     margin: 0 3rem;
 }
-.dark{
-    background-color: rgb(55, 36, 72);
+.link-dark{
+    color: $light-lilac;
+    :hover{
+        color:$purple;
+    }
 }
-.light{
-    background-color: rgb(211, 180, 238);
+.link-light{
+    color: $dark-purple;
+    :hover{
+        opacity: 60%;
+    }
 }
 .navbar-link{
     font-size: 1.3rem;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     margin: 1.5rem;
-    color: rgb(55, 36, 72);
 }
-.navbar-link:hover{
-    color: rgba(55, 36, 72, 0.664);
-}
+
 
 .navbar-themebutton{
     padding: 0;
     margin-right: 3rem;
     background: none;
     border: none;
+    :hover{
+        opacity: 70%;
+        cursor: pointer;
 }
 
-.navbar-themebutton:hover{
-    opacity: 70%;
-    cursor: pointer;
 }

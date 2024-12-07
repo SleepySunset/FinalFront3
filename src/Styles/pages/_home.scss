@@ -1,0 +1,31 @@
+@use '../index' as *;
+
+main{   
+    font-family: "Poppins", sans-serif;
+    padding:2rem;
+    flex-grow: 1;
+}
+.main-light{
+   background-color: $light-lilac;
+}
+.main-dark{
+    background-color: $dark-purple;
+}
+
+.main-title{
+    text-align: center;
+    font-size: 3rem;
+}
+.title-light{
+    color:$dark-purple
+}
+.title-dark{
+    color:$white
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); 
+    gap: 16px;
+    justify-content: center;
+    
+}

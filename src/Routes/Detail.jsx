@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import '../Styles/detail.css'
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { useContextGlobal } from "../Context/Context";
 
 const Detail = () => {
+  const { state } = useContextGlobal();
   const [dentist, setDentist] = useState({})
   const { id } = useParams();
   const endpoint = `https://jsonplaceholder.typicode.com/users/${id}`
@@ -16,13 +16,13 @@ const Detail = () => {
   },[endpoint])
   
   return (
-    <main className="detail-main">
-      <h1 className="main-title">Detail Dentist</h1>
+    <main className={`${state.darkTheme ? 'main-dark' : 'main-light'} detail-main`}>
+      <h1 className={`${state.darkTheme ? 'title-dark' : 'title-light'} main-title`}>Detail Dentist</h1>
       <img className='detail-img'src="../../public/images/doctor.jpeg"/>
-      <p className="detail-text">{dentist.name}</p>
-      <p className="detail-text">{dentist.email}</p>
-      <p className="detail-text">{dentist.phone}</p>
-      <p className="detail-text">{dentist.website}</p>
+      <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} main-text`}>{dentist.name}</p>
+      <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} main-text`}>{dentist.email}</p>
+      <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} main-text`}>{dentist.phone}</p>
+      <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} main-text`}>{dentist.website}</p>
     </main>
   )
 }

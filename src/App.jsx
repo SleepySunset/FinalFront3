@@ -4,7 +4,7 @@ import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs"
 import Detail from "./Routes/Detail"
 import Layout from "./Layouts/Layout";
-import './Styles/app.css'
+
 
 
 function App() {

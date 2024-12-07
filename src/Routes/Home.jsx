@@ -1,17 +1,14 @@
 import Card from '../Components/Card'
 import { useContextGlobal } from '../Context/Context'
-import '../Styles/home.css'
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { dentists } = useContextGlobal()
+  const { state } = useContextGlobal()
 
   return (
-    <main>
-      <h1 className="main-title">Our dentists</h1>
+    <main className={state.darkTheme ? "main-dark" : "main-light"}>
+      <h1 className={`${state.darkTheme ? 'title-dark' : 'title-light'} main-title`}>Our dentists</h1>
       <div className='card-grid'>
-        {dentists.map(dentist => (
+        {state.dentists.map(dentist => (
           <Card key={dentist.id} dentist={dentist}/>
         ))}
       </div>
