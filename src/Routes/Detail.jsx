@@ -18,7 +18,7 @@ const Detail = () => {
   return (
     <main className={`${state.darkTheme ? 'main-dark' : 'main-light'} detail-main`}>
       <h1 className={`${state.darkTheme ? 'title-dark' : 'title-light'} main-title`}>Detail Dentist</h1>
-      <img className='detail-img'src="../../public/images/doctor.jpeg"/>
+      <img className='detail-img'src="/images/doctor.jpeg"/>
       <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} main-text`}>{dentist.name}</p>
       <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} main-text`}>{dentist.email}</p>
       <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} main-text`}>{dentist.phone}</p>
