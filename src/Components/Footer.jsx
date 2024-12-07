@@ -5,7 +5,7 @@ const Footer = () => {
         <p className="footer-text">Powered by</p>
         <img
           className="footer-dhlogo"
-          src="../../public/images/DH.png"
+          src="/images/DH.png"
           alt="DH-logo"
         />
       </div>
@@ -15,7 +15,7 @@ const Footer = () => {
             <a href="#">
               <img
                 className="footer-icon"
-                src="../../public/images/ico-facebook.png"
+                src="/images/ico-facebook.png"
                 alt="Facebook-logo"
               />
             </a>
@@ -24,7 +24,7 @@ const Footer = () => {
             <a href="#">
               <img
                 className="footer-icon"
-                src="../../public/images/ico-instagram.png"
+                src="/images/ico-instagram.png"
                 alt="Instagram-logo"
               />
             </a>
@@ -33,7 +33,7 @@ const Footer = () => {
             <a href="#">
               <img
                 className="footer-icon"
-                src="../../public/images/ico-whatsapp.png"
+                src="/images/ico-whatsapp.png"
                 alt="Whatsapp-logo"
               />
             </a>
@@ -42,7 +42,7 @@ const Footer = () => {
             <a href="#">
               <img
                 className="footer-icon"
-                src="../../public/images/ico-tiktok.png"
+                src="/images/ico-tiktok.png"
                 alt="Tiktok-logo"
               />
             </a>

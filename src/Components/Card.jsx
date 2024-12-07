@@ -18,7 +18,7 @@ const Card = ({ dentist }) => {
       <Link className="card-link" to={`/detail/${id}`}>
         <img
           className="card-img"
-          src="../../public/images/doctor.jpeg"
+          src="/images/doctor.jpeg"
           alt="Foto de un dentista"
         />
         <p className={`${state.darkTheme ? 'text-dark' : 'text-light'} card-text`}>{name}</p>

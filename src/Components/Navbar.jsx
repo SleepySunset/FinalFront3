@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className={state.darkTheme ? "nav-dark" : "nav-light"}>
       <div className="navbar-container">
-      <img className="navbar-logo" src="../../public/images/logo-clinica.png"/>
+      <img className="navbar-logo" src="/images/logo-clinica.png"/>
       <ul className="navbar-menu">
         <Link className={`${state.darkTheme ? 'link-dark' : 'link-light'} navbar-link`}  to="/">Home</Link>
         <Link className={`${state.darkTheme ? 'link-dark' : 'link-light'} navbar-link`} to="/contact">Contact</Link>
