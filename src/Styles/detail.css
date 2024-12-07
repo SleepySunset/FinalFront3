@@ -1,0 +1,15 @@
+.detail-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-img{
+    width: 300px;
+    border-radius: 200px;
+    margin:2rem 0;
+}
+
+.detail-text{
+    color:rgb(55, 36, 72);
+}

@@ -1,21 +1,23 @@
 import { Route, Routes } from "react-router-dom";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
 import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs"
+import Detail from "./Routes/Detail"
+import Layout from "./Layouts/Layout";
+import './Styles/app.css'
 
 
 function App() {
   return (
-      <div className="App">
-          <Navbar/>
+      <div className="app-container">
           <Routes>
-            <Route path="/home" element={<Home/>}></Route>
+            <Route path="/" element={<Layout/>}>
+            <Route path="/" element={<Home/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>
             <Route path="/favs" element={<Favs/>}></Route>
+            <Route path="/detail/:id" element={<Detail/>}/>
+            </Route>
           </Routes>
-          <Footer/>
       </div>
   );
 }

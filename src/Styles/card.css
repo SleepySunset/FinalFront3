@@ -1,0 +1,41 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(171, 115, 227);
+    border-radius: 20px;
+    background-color: rgb(249, 246, 252);
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    
+}
+.card-link{
+    text-decoration: none;
+}
+
+.card-img{
+    width: 250px;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.card-text{
+    color: rgb(55, 36, 72);
+    text-align: center;
+}
+
+.card-link:hover{
+    opacity: 70%;
+}
+
+.fav-button{
+    background: none;
+    border: none;
+    margin-top: 1rem;
+}
+
+.fav-button:hover{
+    opacity: 60%;
+    cursor: pointer;
+}

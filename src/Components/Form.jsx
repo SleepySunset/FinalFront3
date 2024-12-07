@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../Styles/form.css'
 
 const Form = () => {
  
@@ -26,23 +27,21 @@ const Form = () => {
     }
   };
   return (
-    <>
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="form-container">
+     <form onSubmit={handleSubmit}>
+        <div className="form-label">
           <label>Full name</label>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
-        <div>
+        <div className="form-label">
           <label>Email</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <button type="submit">Send</button>
+        <button className="form-btn" type="submit">Send</button>
       </form>
+    {err ? (<h4 className="form-mssg">Please verify your data</h4>) : null}
+    {success ? (<h4 className="form-mssg">{`Thank you ${name}, we will contact you as soon as posible via email`}</h4>) : null}
     </div>
-    {err ? (<h4>Please verify your data</h4>) : null}
-    {success ? (<h4>{`Thank you ${name}, we will contact you as soon as posible via email`}</h4>) : null}
-    </>
   );
 };
 
